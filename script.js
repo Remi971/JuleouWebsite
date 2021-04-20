@@ -66,5 +66,11 @@ toggle.addEventListener('click', () => {
   const sectionActive = document.querySelector(".sectionActive");
   sectionActive.classList.toggle("reduit");
   menu.classList.toggle("activated");
-
+})
+const liens = document.querySelectorAll('.activated a');
+liens.forEach((lien) => {
+  lien.addEventListener('click', () => {
+    toggle.classList.remove('active');
+    menu.classList.remove("activated");
+  })
 })
